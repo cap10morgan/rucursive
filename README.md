@@ -35,9 +35,9 @@ modifying the original one.
       end
     end
 
-symbol_keyed_hash will then have all symbol keys. In other words, the same keys
-and values as big_hash but "more_stuff" and "whoa" will be :more_stuff and :whoa
-instead.
+symbol_keyed_hash will then have all symbol keys. In other words, it will have
+the same keys and values as big_hash but "more_stuff" and "whoa" will
+be :more_stuff and :whoa instead.
 
 ## License
 
