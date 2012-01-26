@@ -9,6 +9,17 @@ module Rucursive
         is_a?(Array) || is_a?(Hash)
       end
 
+      ##
+      # Recursively traverse a compound data structure and call a supplied
+      # block on each value or key/value pair, allowing it to modify the
+      # returned data structure as it goes. It does NOT modify the existing
+      # data structure.
+      #
+      # Required arguments: A block that is called on each element of the data
+      #                     structure
+      #
+      # Return value: A new data structure including any modifications made by
+      #               the supplied block.
       def recurse(&block)
         if is_a?(Array)
           map do |o|
@@ -57,6 +68,10 @@ module Rucursive
         end
       end
 
+      ##
+      # Just like Object#recurse when called on a Hash, but only passes the
+      # values to the supplied block, rather than the keys and values.
+      # Behaves the same as Object#recurse on Arrays.
       def recurse_values(&block)
         if is_a?(Array)
           map do |o|
@@ -81,6 +96,11 @@ module Rucursive
         end
       end
 
+      ##
+      # Just like Object#recurse when called on a Hash, but only passes the
+      # keys to the supplied block, rather than the keys and values.
+      # Recurses through Arrays looking for Hashes, since Arrays don't really
+      # have keys.
       def recurse_keys(&block)
         if is_a?(Array)
           map do |o|
