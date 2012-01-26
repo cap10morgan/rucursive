@@ -1,4 +1,8 @@
 module Rucursive
+  def self.included(base)
+    Object.send(:include, Rucursive::CoreExt::Object)
+  end
+
   module CoreExt
     module Object
       def compound?
@@ -109,8 +113,4 @@ module Rucursive
       end
     end
   end
-end
-
-class Object
-  include Rucursive::CoreExt::Object
 end
