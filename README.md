@@ -39,6 +39,14 @@ symbol_keyed_hash will then have all symbol keys. In other words, it will have
 the same keys and values as big_hash but "more_stuff" and "whoa" will
 be :more_stuff and :whoa instead.
 
+## Why would I want this?
+
+No idea! I use it for cleaning up the responses from third-party web services
+where the HTTParty data structure returned follows the JSON response as closely
+as possible, but I want to "Ruby-ize" it by makeing the keys snake-cased and
+symbols. I also convert the values that look like numbers or bools into actual
+numerics and bools.
+
 ## License
 
 MIT License. See LICENSE file.
