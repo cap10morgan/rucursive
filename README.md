@@ -8,7 +8,7 @@ modifying the original one.
 
 ## Installation
 
-gem install rucursive
+    gem install rucursive
 
 ## Usage
 
