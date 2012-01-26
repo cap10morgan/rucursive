@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require "rucursive/version"
 
 Gem::Specification.new do |s|
-  s.name        = "Rucursive"
+  s.name        = "rucursive"
   s.version     = Rucursive::VERSION
   s.authors     = ["Wes Morgan"]
   s.email       = ["cap10morgan@gmail.com"]
