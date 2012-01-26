@@ -43,7 +43,7 @@ be :more_stuff and :whoa instead.
 
 No idea! I use it for cleaning up the responses from third-party web services
 where the HTTParty data structure returned follows the JSON response as closely
-as possible, but I want to "Ruby-ize" it by makeing the keys snake-cased and
+as possible, but I want to "Ruby-ize" it by making the keys snake-cased and
 symbols. I also convert the values that look like numbers or bools into actual
 numerics and bools.
 
